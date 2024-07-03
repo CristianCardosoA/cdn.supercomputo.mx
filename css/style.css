@@ -1,0 +1,792 @@
+ body,
+ html {
+     margin: 0;
+     padding: 0;
+     height: 100%;
+     background: #000;
+     color: #ffffff;
+     font-family: "Poppins", sans-serif;
+     overflow-x: hidden;
+     scroll-behavior: smooth;
+
+ }
+
+
+
+
+ a {
+     color: #ffffff;
+ }
+
+ /* header */
+
+ .header {
+     background: rgba(255, 255, 255, 0.032);
+     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+     backdrop-filter: blur(5px);
+     -webkit-backdrop-filter: blur(5px);
+     border-bottom: 0.5px solid rgba(255, 255, 255, 0.104);
+     position: sticky;
+     top: 0;
+     width: 100%;
+     z-index: 3;
+ }
+
+ .header ul {
+     margin: 0;
+     padding: 0;
+     list-style: none;
+     overflow: hidden;
+ }
+
+ .header li a {
+     display: block;
+     padding: 20px 20px;
+     font-weight: 200;
+     font-size: medium;
+     text-decoration: none;
+     transition: background-color 0.3s ease;
+     /* Añadir una transición suave */
+ }
+
+ .header li button {
+     margin: 10px 20px;
+ }
+
+ .header li a:hover,
+ .header .menu-btn:hover {
+     background-color: rgba(244, 244, 244, 0.072);
+ }
+
+ .header .logo img {
+     display: block;
+     float: left;
+     width: 180px;
+     font-size: 2em;
+     padding: 10px 20px;
+     text-decoration: none;
+ }
+
+ /* menu */
+
+ .header .menu {
+     clear: both;
+     max-height: 0;
+     transition: max-height .2s ease-out;
+ }
+
+ /* menu icon */
+
+ .header .menu-icon {
+     cursor: pointer;
+     display: inline-block;
+     float: right;
+     padding: 28px 20px;
+     position: relative;
+     user-select: none;
+ }
+
+ .header .menu-icon .navicon {
+     background: #ffffff;
+     display: block;
+     height: 2px;
+     position: relative;
+     transition: background .2s ease-out;
+     width: 18px;
+ }
+
+ .header .menu-icon .navicon:before,
+ .header .menu-icon .navicon:after {
+     background: #ffffff;
+     content: '';
+     display: block;
+     height: 100%;
+     position: absolute;
+     transition: all .2s ease-out;
+     width: 100%;
+ }
+
+ .header .menu-icon .navicon:before {
+     top: 5px;
+ }
+
+ .header .menu-icon .navicon:after {
+     top: -5px;
+ }
+
+ /* menu btn */
+
+ .header .menu-btn {
+     display: none;
+ }
+
+ .header .menu-btn:checked~.menu {
+     max-height: 340px;
+ }
+
+ .header .menu-btn:checked~.menu-icon .navicon {
+     background: transparent;
+ }
+
+ .header .menu-btn:checked~.menu-icon .navicon:before {
+     transform: rotate(-45deg);
+ }
+
+ .header .menu-btn:checked~.menu-icon .navicon:after {
+     transform: rotate(45deg);
+ }
+
+ .header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+ .header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+     top: 0;
+ }
+
+
+ #headerBtn {
+     padding: 5px 20px;
+     display: flex;
+     font-weight: 300;
+     font-family: "Poppins", sans-serif;
+     color: #ffffff;
+     border-radius: 5px;
+     background-color: #235e0d45;
+     border: 1px solid #235e0dd4;
+     transition: box-shadow 0.3s ease;
+     margin-bottom: 30px;
+     /* Añadir una transición suave */
+
+ }
+
+ #headerBtn:hover {
+     box-shadow: 0 0 10px 5px rgba(35, 94, 13, 0.7);
+     /* Efecto de brillo */
+ }
+
+ .content {
+     position: relative;
+     z-index: 1;
+ }
+
+ .firstSection {
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+ }
+
+ .secondSection {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: wrap;
+     margin-top: -7%;
+     transition: opacity 5s ease;
+ }
+
+ a {
+     text-decoration: none;
+ }
+
+ .card {
+     width: 300px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     margin: 2% 20px;
+     transition: transform 0.3s ease;
+
+ }
+
+ .imgContainer {
+     background: rgba(255, 255, 255, 0.032);
+     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+     backdrop-filter: blur(5px);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     -webkit-backdrop-filter: blur(5px);
+     border-radius: 20px;
+     border: 0.5px solid rgba(255, 255, 255, 0.104);
+     /* padding: 50px; */
+     width: 250px;
+     height: 250px;
+ }
+
+ .imgCard {
+     width: 100%;
+ }
+
+
+ .cardTitle {
+     font-size: large;
+     text-align: center;
+     margin-bottom: 0;
+ }
+
+ .cardDescription {
+     font-weight: 300;
+     text-align: center;
+ }
+
+ .imgBrand {
+     max-width: 120px;
+     height: 80px;
+     object-fit: contain;
+ }
+
+ .categoryBrandRow {
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+     gap: 20px;
+ }
+
+ #brandsSection {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     margin-top: 100px;
+ }
+
+ #mainBtn {
+     text-align: center;
+     font-weight: 600;
+     font-size: large;
+     font-family: "Poppins", sans-serif;
+     margin-top: 4%;
+     padding: 1em 3em;
+     border: none;
+     outline: none;
+     color: rgb(255, 255, 255);
+     background: #1111115e;
+     position: relative;
+     cursor: pointer;
+     z-index: 0;
+     border-radius: 10px;
+     user-select: none;
+     -webkit--user-select: none;
+     touch-action: manipulation;
+     transition: opacity 5s ease, transform 0.3s ease;
+     /* Aplica transiciones para opacidad y transformación */
+ }
+
+ #location .infoColumn {
+     width: 90%;
+ }
+
+ #mainBtn:before {
+     content: "hello";
+     background: linear-gradient(45deg,
+             #ff0000,
+             #ff7300,
+             #7a00ff,
+             #ff00c8,
+             #0D9BCF,
+             #41BF12,
+             #FFF500,
+             #ff0000);
+     position: absolute;
+     top: -2px;
+     left: -2px;
+     background-size: 400%;
+     z-index: -1;
+     filter: blur(5px);
+     -webkit-filter: blur(5px);
+     width: calc(100% + 4px);
+     height: calc(100% + 4px);
+     animation: glowing 20s linear infinite;
+     transition: opactiy 0.3s ease-in-out;
+
+     border-radius: 10px;
+ }
+
+
+
+ @keyframes glowing {
+     0% {
+         background-position: 0 0;
+     }
+
+     50% {
+         background-position: 400% 0;
+     }
+
+     100% {
+         background-position: 0 0;
+     }
+ }
+
+ #mainBtn:after {
+     z-index: -1;
+     content: "";
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     background: rgb(0, 0, 0);
+     left: 0;
+     top: 0;
+     border-radius: 10px;
+ }
+
+ #mainBtn:hover {
+     transform: scale(1.1);
+     /* Escala del 110% en hover */
+ }
+
+ #description {
+     color: #8a939e;
+     text-align: center;
+     margin: 2% 10px;
+     font-size: large;
+     transition: opacity 5s ease;
+ }
+
+ .sectionIcon {
+     width: 160px;
+     margin-left: -30px;
+ }
+
+ .sectionTitle {
+     font-size: x-large;
+     margin: 2% 0;
+ }
+
+ .sectionContainer {
+     display: flex;
+     width: 100%;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+ }
+
+ .sectionBtn {
+     padding: 5px 20px;
+     cursor: pointer;
+     display: flex;
+     font-weight: 600;
+     font-family: "Poppins", sans-serif;
+     color: #ffffff;
+     border-radius: 5px;
+
+
+     transition: box-shadow 0.3s ease;
+     margin: 5% 0
+ }
+
+ #repairPCBtn {
+     border: 1px solid #ff7300;
+     background-color: #ff73004e;
+ }
+
+ #repairPCBtn:hover {
+     box-shadow: 0 0 10px 5px #ff7300;
+ }
+
+ #repairMacBtn {
+     border: 1px solid #7a00ff;
+     background-color: #7b00ff5b;
+ }
+
+ #repairMacBtn:hover {
+     box-shadow: 0 0 10px 5px #7a00ff;
+ }
+
+ #repairMBBtn {
+     border: 1px solid #ff00c8;
+     background-color: #ff00c841;
+ }
+
+ #repairMBBtn:hover {
+     box-shadow: 0 0 10px 5px #ff00c8;
+ }
+
+ #repairCelBtn {
+     border: 1px solid #FFF500;
+     background-color: #fff7004d;
+ }
+
+ #repairCelBtn:hover {
+     box-shadow: 0 0 10px 5px #FFF500;
+ }
+
+ #backupBtn {
+     border: 1px solid #00FFFF;
+     background-color: #085858;
+ }
+
+ #backupBtn:hover {
+     box-shadow: 0 0 10px 5px #00FFFF;
+ }
+
+ #uptAntBtn {
+     border: 1px solid #ff0000;
+     background-color: #ff000044;
+ }
+
+ #uptAntBtn:hover {
+     box-shadow: 0 0 10px 5px #ff0000;
+ }
+
+ #softBtn {
+     border: 1px solid #0D9BCF;
+     background-color: #0d9bcf53;
+ }
+
+ #softBtn:hover {
+     box-shadow: 0 0 10px 5px #0D9BCF;
+ }
+
+ #repairConBtn {
+     border: 1px solid #41BF12;
+     background-color: #40bf1248;
+
+ }
+
+ #repairConBtn:hover {
+     box-shadow: 0 0 10px 5px #41BF12;
+ }
+
+ .sectionDescription {
+     color: #8a939e;
+     text-align: justify;
+ }
+
+ .sectionDetails {
+     list-style-type: none;
+     /* Elimina las viñetas predeterminadas */
+     padding-left: 0;
+     /* Elimina el padding por defecto del ul */
+ }
+
+ .sectionDetails li {
+     position: relative;
+     /* Necesario para posicionar el pseudo-elemento */
+     margin: 2% 0;
+     padding-left: 20px;
+     /* Espacio a la izquierda para la viñeta personalizada */
+ }
+
+ .sectionDetails li::before {
+     content: '•';
+     font-weight: bold;
+     position: absolute;
+     left: 0;
+     top: 0;
+ }
+
+ .card:hover {
+     transform: scale(1.1);
+ }
+
+ #repairPCDetail li::before {
+     color: #ff7300;
+ }
+
+ #repairMacDetail li::before {
+     color: #7a00ff;
+ }
+
+ #repairMBDetail li::before {
+     color: #ff00c8;
+ }
+
+ #uptAntDetail li::before {
+     color: #ff0000;
+ }
+
+ #repairCelDetail li::before {
+     color: #FFF500
+ }
+
+ #backupDetail li::before {
+     color: #00FFFF
+ }
+
+ #repairConDetail li::before {
+
+     color: #41BF12;
+ }
+
+ #softDetail li::before {
+     color: #0D9BCF
+ }
+
+ .icon {
+     width: 20px;
+     height: 20px;
+     margin-right: 5px;
+ }
+
+ .infoColumn,
+ .imgColumn {
+     margin: 2% 4%;
+ }
+
+ .sectionImgContainer {
+     background: rgba(0, 0, 0, 0);
+     backdrop-filter: blur(2px);
+     -webkit-backdrop-filter: blur(2px);
+     border-radius: 30px;
+     margin: 0;
+ }
+
+ .sectionImg {
+     max-width: 280px;
+     margin: 10px;
+     border-radius: 26px;
+     display: block;
+ }
+
+ .section {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     align-items: center;
+     background-repeat: no-repeat;
+     background-size: contain;
+     background-position: top;
+     margin: 110px 0
+ }
+
+ #repairPCSection {
+     background-image: url('https://cdn.statically.io/gh/CristianCardosoA/cdn.supercomputo.mx/main/images/nebulas/orange.webp');
+ }
+
+ #repairMacSection {
+     background-image: url('https://cdn.statically.io/gh/CristianCardosoA/cdn.supercomputo.mx/main/images/nebulas/purple.webp');
+ }
+
+ #repairMBSection {
+     background-image: url('https://cdn.statically.io/gh/CristianCardosoA/cdn.supercomputo.mx/main/images/nebulas/pink.webp');
+ }
+
+ #backupSection {
+     background-image: url('https://cdn.statically.io/gh/CristianCardosoA/cdn.supercomputo.mx/main/images/nebulas/cyan.webp');
+ }
+
+ #uptAntSection {
+     background-image: url('https://cdn.statically.io/gh/CristianCardosoA/cdn.supercomputo.mx/main/images/nebulas/red.webp');
+ }
+
+ #repairCelSection {
+     background-image: url('https://cdn.statically.io/gh/CristianCardosoA/cdn.supercomputo.mx/main/images/nebulas/yellow.webp');
+ }
+
+ #repairConSection {
+     background-image: url('https://cdn.statically.io/gh/CristianCardosoA/cdn.supercomputo.mx/main/images/nebulas/green.webp');
+
+ }
+
+ #softSection {
+     background-image: url('https://cdn.statically.io/gh/CristianCardosoA/cdn.supercomputo.mx/main/images/nebulas/blue.webp');
+ }
+
+
+
+ #repairPCSection .sectionImgContainer {
+     border: 1px solid #ff7300;
+ }
+
+ #repairMacSection .sectionImgContainer {
+     border: 1px solid #7a00ff;
+ }
+
+ #repairMBSection .sectionImgContainer {
+     border: 1px solid #ff00c8;
+ }
+
+ #uptAntSection .sectionImgContainer {
+     border: 1px solid #ff0000;
+ }
+
+ #aboutUsSection .sectionImgContainer {
+     border: 1px solid #ffffff;
+
+ }
+
+ #repairCelSection .sectionImgContainer {
+     border: 1px solid #FFF500;
+ }
+
+ #repairConSection .sectionImgContainer {
+
+     border: 1px solid #41BF12;
+ }
+
+ #backupSection .sectionImgContainer {
+
+     border: 1px solid #00FFFF;
+ }
+
+ #softSection .sectionImgContainer {
+     border: 1px solid #0D9BCF;
+ }
+
+ #customerSection {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     margin-top: 170px;
+ }
+
+
+ .mapContainer {
+     width: 100%;
+     max-width: 600px;
+
+
+ }
+
+ .mapContainer iframe {
+     width: 350px;
+     height: 200px;
+     border-radius: 20px;
+
+ }
+
+ #floatBtn {
+     padding: 5px 20px;
+     display: flex;
+     font-size: large;
+     font-weight: 300;
+     font-family: "Poppins", sans-serif;
+     color: #ffffff;
+     border-radius: 5px;
+     background-color: #235e0d45;
+     border: 1px solid #235e0dd4;
+     transition: box-shadow 0.3s ease;
+     position: fixed;
+     bottom: 10px;
+     /* Puedes ajustar la distancia desde el borde inferior */
+     right: 10px;
+     /* Puedes ajustar la distancia desde el borde derecho */
+ }
+
+ footer {
+     margin-top: 4%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     color: #8a939e;
+     flex-direction: column;
+ }
+
+ .infoFooter {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 20px;
+     flex-direction: column;
+ }
+
+ .rowFooter {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 20px;
+ }
+
+ .privacy {
+     display: flex;
+     flex-direction: column;
+     margin-top: 10%;
+     margin-left: 2%;
+     margin-right: 2%;
+ }
+
+ .pPrivacy {
+     text-align: justify;
+ }
+
+ @media (min-width: 768px) {
+     .header li {
+         float: left;
+     }
+
+     .header li a {
+         padding: 20px 20px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+     }
+
+     .header li button {
+         margin: 15px 25px;
+     }
+
+     .header .menu {
+         clear: none;
+         float: right;
+         max-height: none;
+     }
+
+     .header .menu-icon {
+         display: none;
+     }
+
+     .header {
+         position: fixed;
+     }
+
+     #title {
+         margin: 2% 8% !important;
+         font-size: 50px;
+     }
+
+     #description {
+         margin: 2% 15% !important;
+         font-size: x-large;
+
+     }
+
+     .sectionImg {
+         max-width: 500px;
+     }
+
+     .section {
+         flex-direction: row;
+         height: 100vh;
+         background-position: right;
+     }
+
+     .sectionContainer {
+         flex-direction: row;
+     }
+
+
+     .reverse {
+         flex-direction: row-reverse !important;
+         background-position: left !important;
+     }
+
+     #customerSection {
+
+         height: 100vh;
+     }
+
+     .infoColumn {
+         max-width: 46%;
+     }
+
+     .mapContainer iframe {
+         width: 600px;
+         height: 450px;
+     }
+
+     #floatBtn {
+         display: none;
+     }
+
+     .infoFooter {
+         flex-direction: row;
+     }
+
+     #location .infoColumn {
+         width: auto;
+     }
+
+ }
