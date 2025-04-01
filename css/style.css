@@ -167,20 +167,12 @@
      z-index: 1;
  }
 
- .firstSection {
-     height: 100vh;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     flex-direction: column;
- }
-
  .secondSection {
      display: flex;
      justify-content: center;
      align-items: center;
      flex-wrap: wrap;
-     margin-top: -7%;
+     margin-top: 8%;
      transition: opacity 5s ease;
  }
 
